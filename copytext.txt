@@ -1,0 +1,8 @@
+This file structure organizes the portfolio into separate assets:
+
+- **index.html** – Contains the semantic HTML structure, linking to external CSS, JS, and images.
+- **css/style.css** – Holds all styles, including variables, layouts, and responsive design.
+- **js/script.js** – Includes all interactive features: dark mode, mobile menu, typing animation, counters, and the dynamic contact form.
+- **img/** – Folder for profile images (a placeholder SVG and fallback are referenced).
+
+To use, place these files in the corresponding directories and add your own profile image to the `img` folder.
