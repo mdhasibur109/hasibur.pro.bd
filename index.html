@@ -2,226 +2,476 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Hasibur Rahman · MIS Officer (RMG & Spinning)</title>
-  <!-- ========== EXTERNAL CSS ========== -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Google Font & Font Awesome (CDN - kept for simplicity, but can be moved to CSS) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Hasibur Rahman · MIS Officer</title>
+  <!-- SEO meta tags -->
+  <meta name="description" content="MIS Officer specialized in garments industry – data intelligence, ERP, Power BI, advanced analytics. 8+ years experience.">
+  <meta name="keywords" content="MIS Officer, garments, data analyst, Power BI, Excel, ERP, production reporting, inventory analysis, Dhaka">
+  <meta name="author" content="Md. Hasibur Rahman">
+  <!-- Fonts + Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ========== NAVIGATION ========== -->
+  
+  <!-- Simple Transaction Toast -->
+   <!--
+  <div class="transaction-toast" id="transactionToast">
+    <div class="toast-icon">
+      <i class="fas fa-exchange-alt"></i>
+    </div>
+    <div class="toast-content" id="toastContent">
+      <span class="toast-message">New transaction</span>
+      <span class="toast-time">just now</span>
+    </div>
+  </div>
+  -->
+
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">M. RAHMAN</div>
-    <div class="nav-right">
-      <button class="hamburger" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
+    <div class="nav-container container">
+
+<!-- logo only start-->
+
+
+<div class="logo" style="
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 40px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    cursor: default;
+    width: fit-content;
+    margin: 0;
+    ">
+    <!-- Image Section -->
+    <div style="
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid white;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        flex-shrink: 0;
+        ">
+        <img src="https://ui-avatars.com/api/?name=Hasib&background=667eea&color=fff&size=80" 
+             alt="Hasib"
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                ">
+    </div>
+    
+    <!-- Text Section -->
+    <span style="
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        font-weight: 600;
+        color: white;
+        letter-spacing: -0.02em;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1;
+        white-space: nowrap;
+        ">Hasib</span>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.logo:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .logo {
+        padding: 4px 10px;
+        gap: 6px;
+    }
+    .logo div:first-child {
+        width: 28px;
+        height: 28px;
+        border-width: 1.5px;
+    }
+}
+</style>
+<!-- logo only End-->
+
+     
+
+
+
+
+
+
+
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Exp</a>
+        <a href="#experience">Career</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Connect</a>
       </div>
-      <button class="mode-toggle" id="themeBtn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Career</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Connect</a>
     </div>
   </nav>
 
-  <!-- ========== BACK TO TOP ========== -->
-  <div class="btt" id="backTop"><i class="fas fa-arrow-up"></i></div>
+  <!-- Hero Section with Typed Text -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-subtitle">MIS Officer</span>
+          <h1>Md. Hasibur <span class="text-gradient">Rahman</span></h1>
+          
+          <!-- Typed Text Container -->
+          <div class="typed-container">
+            <span class="typed-text" id="typed-text"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+          
+          <p class="hero-description">Transforming garment industry data into strategic decisions with 8+ years of experience in ERP, Power BI, and advanced analytics.</p>
+          
+          <!-- Stats with counters -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-value"><span class="counter" data-target="9">0</span>+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value"><span class="counter" data-target="520">0</span>+</div>
+              <div class="stat-label">Reports Delivered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value"><span class="counter" data-target="28">0</span></div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+          </div>
 
-  <!-- ========== HOME SECTION ========== -->
-  <section id="home">
-    <div class="container hero">
-      <!-- profile image (from img folder) -->
-      <div class="hero-photo">
-        <!-- img src points to image folder; we provide fallback background -->
-        <img src="img/profile-placeholder.svg" alt="Md. Hasibur Rahman" onerror="this.style.display='none'; this.parentElement.style.backgroundImage='url(\'img/profile-fallback.jpg\')';">
-        <span>MIS LEADER</span>
-      </div>
-      <div class="hero-right">
-        <h1>Md. Hasibur Rahman</h1>
-        <div class="typed-text" id="typingLine"></div>
-        <p class="hero-summary">MIS professional in RMG & Spinning. Production dashboards, ERP reporting, factory analytics. Driving data-led efficiency.</p>
-        <div class="btn-group">
-          <a href="#" class="btn"><i class="fas fa-download"></i> CV</a>
-          <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact</a>
-          <a href="#projects" class="btn btn-outline"><i class="fas fa-eye"></i> Portfolio</a>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="#" class="btn btn-outline" id="downloadCV">Download CV</a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="profile-card">
+            <div class="profile-placeholder">
+              <img style="border-radius: 50%; border: 1px solid red; width: 100%; height: 100%;" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="">
+            </div>
+            <h3>Md. Hasibur Rahman</h3>
+            <p>MIS Officer | RMG</p>
+            <div class="profile-contacts">
+              <a href="mailto:mdhasibur109@gmail.com"><i class="fas fa-envelope"></i></a>
+              <a href="https://wa.me/8801930665079"><i class="fab fa-whatsapp"></i></a>
+              <a href="http://hasib.pro.bd" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== KPI DASHBOARD ========== -->
-  <section style="padding-top:0">
+  <!-- About Section -->
+  <section class="about" id="about">
     <div class="container">
-      <div class="kpi-grid">
-        <div class="stat-card"><i class="fas fa-briefcase"></i><div class="kpi-num" data-target="5">0</div><span>Years exp</span><div class="progress-bg"><div class="progress-fill" style="width:75%"></div></div></div>
-        <div class="stat-card"><i class="fas fa-file-alt"></i><div class="kpi-num" data-target="780">0</div><span>Reports</span><div class="progress-bg"><div class="progress-fill" style="width:70%"></div></div></div>
-        <div class="stat-card"><i class="fas fa-server"></i><div class="kpi-num" data-target="5">0</div><span>Systems</span><div class="progress-bg"><div class="progress-fill" style="width:60%"></div></div></div>
-        <div class="stat-card"><i class="fas fa-chart-line"></i><div class="kpi-num" data-target="18">0</div><span>Efficiency ↑%</span><div class="progress-bg"><div class="progress-fill" style="width:80%"></div></div></div>
-        <div class="stat-card"><i class="fas fa-diagram-project"></i><div class="kpi-num" data-target="26">0</div><span>Projects</span><div class="progress-bg"><div class="progress-fill" style="width:64%"></div></div></div>
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>Professional MIS Officer with proven track record in garment manufacturing</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fas fa-bullseye"></i>
+          <h3>Career Objective</h3>
+          <p>To leverage data analytics and MIS expertise in optimizing production efficiency and driving data-informed decisions in the garment industry.</p>
+        </div>
+        
+        <div class="about-card">
+          <i class="fas fa-trophy"></i>
+          <h3>Key Achievements</h3>
+          <ul>
+            <li>Reduced monthly closing time from 7 to 2 days</li>
+            <li>Automated 15+ manual reporting processes</li>
+            <li>Trained 80+ floor supervisors on ERP systems</li>
+          </ul>
+        </div>
+        
+        <div class="about-card">
+          <i class="fas fa-star"></i>
+          <h3>Core Strengths</h3>
+          <div class="strength-list">
+            <span>Power BI</span>
+            <span>ERP Systems</span>
+            <span>Advanced Excel</span>
+            <span>SQL</span>
+            <span>Data Analysis</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
-  <section id="about">
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
     <div class="container">
-      <h2>About me</h2>
-      <div class="glass-card">
-        <p>I'm a dedicated MIS officer specialized in RMG and spinning. I design automated reporting, real-time dashboards, and ERP integration for textile operations. Experience spans production tracking, inventory, and cross-functional coordination.</p>
-        <p class="text-muted" style="margin-top:1rem;"><strong>Expertise:</strong> Yarn spinning, garment manufacturing, supply chain MIS, lean reporting.</p>
+      <div class="section-header">
+        <h2>Technical Expertise</h2>
+        <p>Specialized skills in MIS and data analytics</p>
       </div>
+      
+      <div class="skills-grid" id="skillsContainer"></div>
     </div>
   </section>
 
-  <!-- ========== SKILLS ========== -->
-  <section id="skills" style="background:var(--bg1);">
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
     <div class="container">
-      <h2>Core skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item"><i class="fas fa-file-excel"></i><div>Advanced Excel</div></div>
-        <div class="skill-item"><i class="fas fa-chart-pie"></i><div>Power BI</div></div>
-        <div class="skill-item"><i class="fas fa-cloud"></i><div>ERP Systems</div></div>
-        <div class="skill-item"><i class="fas fa-print"></i><div>Production Reporting</div></div>
-        <div class="skill-item"><i class="fas fa-database"></i><div>Database Mgmt</div></div>
-        <div class="skill-item"><i class="fas fa-robot"></i><div>Automation</div></div>
-        <div class="skill-item"><i class="fas fa-truck"></i><div>Supply Chain MIS</div></div>
-        <div class="skill-item"><i class="fas fa-chart-simple"></i><div>Factory Analytics</div></div>
+      <div class="section-header">
+        <h2>Work Experience</h2>
+        <p>8+ years in garment industry MIS</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ========== EXPERIENCE ========== -->
-  <section id="experience">
-    <div class="container">
-      <h2>Work experience</h2>
+      
       <div class="timeline">
-        <div class="timeline-item glass-card">
-          <h3>Jr. Officer (MIS)</h3>
-          <div class="text-muted">Marma Composite Ltd. · Savar | 2023 – present</div>
-          <ul>
-            <li>Daily Sewing WIP, Production reports; dashboards using Pivot & Charts.</li>
-            <li>Coordination with Planning, Store, Commercial.</li>
-          </ul>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - Present</div>
+          <div class="timeline-content">
+            <h3>Sr. MIS Officer</h3>
+            <h4>Apex Garments Ltd. (EPZ)</h4>
+            <ul>
+              <li>Developed Power BI dashboards adopted by CEO for daily reviews</li>
+              <li>Automated fabric reconciliation process, saving 15 hours monthly</li>
+              <li>Implemented real-time production tracking system</li>
+            </ul>
+          </div>
         </div>
-        <div class="timeline-item glass-card">
-          <h3>Assistant Officer (MIS)</h3>
-          <div class="text-muted">AA Knitspin Ltd. (Dutch Bangla) · Gazipur | Jan 2022 – Nov 2023</div>
-          <ul>
-            <li>Daily yarn & raw material reports, ERP updates, inventory control.</li>
-            <li>Monthly WIP, yarn realization reports for management.</li>
-          </ul>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2017 - 2021</div>
+          <div class="timeline-content">
+            <h3>MIS Executive</h3>
+            <h4>Square Fashions Ltd.</h4>
+            <ul>
+              <li>Designed VBA tools for real-time efficiency tracking</li>
+              <li>ERP superuser - trained 80+ floor supervisors</li>
+              <li>Created automated inventory monitoring system</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2015 - 2017</div>
+          <div class="timeline-content">
+            <h3>Junior MIS Officer</h3>
+            <h4>DBL Group</h4>
+            <ul>
+              <li>Consolidated production data for 5 manufacturing units</li>
+              <li>Introduced exception reporting system</li>
+              <li>Assisted in ERP implementation</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PROJECTS ========== -->
-  <section id="projects" style="background:var(--bg1);">
+  <!-- Education -->
+  <section class="education">
     <div class="container">
-      <h2>Key projects</h2>
-      <div class="filter-wrap">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="production">Production</button>
-        <button class="filter-btn" data-filter="erp">ERP</button>
-        <button class="filter-btn" data-filter="analytics">Analytics</button>
-        <button class="filter-btn" data-filter="automation">Automation</button>
+      <div class="section-header">
+        <h2>Education</h2>
+        <p>Academic qualifications</p>
       </div>
-      <div class="projects-grid" id="projectList">
-        <div class="project-card glass-card" data-cat="production automation">
-          <i class="fas fa-print" style="font-size:2.2rem; color:var(--blue);"></i>
-          <h3 style="margin:0.5rem 0 0.2rem;">Production MIS Automation</h3>
-          <span class="text-muted">RMG / Production</span>
-          <p class="text-muted" style="margin-top:0.5rem;">Manual delays → automated capture + Power BI, 70% faster reporting.</p>
+      
+      <div class="education-grid">
+        <div class="education-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>MBA in MIS</h3>
+          <p>University of Dhaka</p>
+          <span>2015 | CGPA 3.65</span>
         </div>
-        <div class="project-card glass-card" data-cat="erp analytics">
-          <i class="fas fa-cloud" style="font-size:2.2rem; color:var(--blue);"></i>
-          <h3 style="margin:0.5rem 0 0.2rem;">ERP Reporting Optimization</h3>
-          <span class="text-muted">Spinning / ERP</span>
-          <p class="text-muted">85% faster executive reports, unified data across mills.</p>
-        </div>
-        <div class="project-card glass-card" data-cat="analytics automation">
-          <i class="fas fa-boxes" style="font-size:2.2rem; color:var(--blue);"></i>
-          <h3 style="margin:0.5rem 0 0.2rem;">Yarn Inventory Dashboard</h3>
-          <span class="text-muted">Supply Chain</span>
-          <p class="text-muted">Reduced variance to 1.2% with barcode + real-time tracking.</p>
+        
+        <div class="education-card">
+          <i class="fas fa-university"></i>
+          <h3>BBA (Accounting & IS)</h3>
+          <p>National University</p>
+          <span>2013 | First Class</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== ACHIEVEMENTS ========== -->
-  <section>
+  <!-- Projects Section with 3-Image Slider -->
+  <section class="projects" id="projects">
     <div class="container">
-      <h2>Achievements & strengths</h2>
-      <div class="achievement-row">
-        <div class="glass-card">
-          <ul class="list-unstyled">
-            <li><i class="fas fa-trophy" style="color:var(--blue);"></i> “Best MIS Innovation” – 2023</li>
-            <li><i class="fas fa-trophy" style="color:var(--blue);"></i> 60% faster report turnaround</li>
-            <li><i class="fas fa-trophy" style="color:var(--blue);"></i> Led digital transformation in 3 mills</li>
-          </ul>
-        </div>
-        <div class="glass-card">
-          <p>Data Modeling <span class="progress-bg"><span class="progress-fill" style="width:95%"></span></span></p>
-          <p>ERP Configuration <span class="progress-bg"><span class="progress-fill" style="width:88%"></span></span></p>
-          <p>Dashboard Storytelling <span class="progress-bg"><span class="progress-fill" style="width:92%"></span></span></p>
-        </div>
+      <div class="section-header">
+        <h2>📊 Business Intelligence Projects</h2>
+        <p>Real-world dashboard and reporting solutions</p>
       </div>
+      
+      <div class="projects-grid" id="projectsContainer"></div>
     </div>
   </section>
 
-  <!-- ========== CONTACT (dynamic) ========== -->
-  <section id="contact" style="background:var(--bg1);">
+  <!-- Stats Section -->
+  <section class="stats">
     <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-row">
-        <!-- left: info & whatsapp -->
-        <div class="glass-card contact-info">
-          <p><i class="fas fa-envelope"></i> mdhasibur109@gmail.com</p>
-          <p><i class="fas fa-phone-alt"></i> +880 1930-665079</p>
-          <p><i class="fab fa-linkedin"></i> linkedin.com/in/hrahman-mis</p>
-          <!-- WhatsApp direct chat -->
-          <a href="https://wa.me/8801930665079?text=Hello%20Hasibur%2C%20I%20visited%20your%20portfolio." 
-             target="_blank" 
-             class="whatsapp-btn">
-            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-          </a>
-          <p style="font-size:0.9rem; margin-top:0.8rem; opacity:0.8;">Typically replies within an hour</p>
+      <div class="stats-grid" id="statsSection">
+        <div class="stats-card">
+          <div class="stats-number"><span class="counter" data-target="9">0</span>+</div>
+          <div class="stats-label">Years Experience</div>
+          <div class="stats-progress">
+            <div class="stats-progress-bar" style="width: 0%"></div>
+          </div>
         </div>
-        <!-- right: email form (sends to mdhasibur109@gmail.com) -->
-        <div class="contact-form">
-          <form id="dynamicContactForm">
-            <input type="text" id="name" placeholder="Your name" required>
-            <input type="email" id="email" placeholder="Your email address" required>
-            <textarea id="message" placeholder="Your message" required></textarea>
-            <div id="formStatus" class="form-status"></div>
-            <button type="submit" class="btn" style="width:100%;">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
-          <p style="font-size:0.85rem; margin-top:0.8rem; text-align:center;">
-            <i class="fas fa-shield-alt"></i> Messages go directly to mdhasibur109@gmail.com
-          </p>
+        
+        <div class="stats-card">
+          <div class="stats-number"><span class="counter" data-target="520">0</span>+</div>
+          <div class="stats-label">Reports Delivered</div>
+          <div class="stats-progress">
+            <div class="stats-progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+        
+        <div class="stats-card">
+          <div class="stats-number"><span class="counter" data-target="28">0</span></div>
+          <div class="stats-label">Projects</div>
+          <div class="stats-progress">
+            <div class="stats-progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+        
+        <div class="stats-card">
+          <div class="stats-number"><span class="counter" data-target="32">0</span>%</div>
+          <div class="stats-label">Efficiency Gain</div>
+          <div class="stats-progress">
+            <div class="stats-progress-bar" style="width: 0%"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Let's discuss your MIS requirements</p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:mdhasibur109@gmail.com">mdhasibur109@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+8801930665079">+880 1930-665079</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/8801930665079">Chat on WhatsApp</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <div>
+              <h4>Website</h4>
+              <a href="http://hasib.pro.bd" target="_blank">hasib.pro.bd</a>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-form" id="request">
+          <h3>Send a Message</h3>
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button class="btn btn-primary" id="submitForm">Send Message</button>
+          <div id="formStatus" class="form-status"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <p style="font-weight:600;">Md. Hasibur Rahman – MIS Professional</p>
-    <div><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-github"></i></a></div>
-    <p>© 2025 All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="currentYear"></span> Md. Hasibur Rahman. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- ========== EXTERNAL JAVASCRIPT ========== -->
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <script src="js/script.js"></script>
-  <!-- Note: images are stored in img/ folder. Please add profile-placeholder.svg or fallback. -->
 </body>
 </html>
